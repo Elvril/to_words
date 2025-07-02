@@ -1,0 +1,15 @@
+# This file configures the static analysis results for your project (errors,
+# warnings, and lints).
+#
+# This enables the 'recommended' set of lints from `package:lints`.
+# This set helps identify many issues that may lead to problems when running
+# or consuming your code.
+include: package:lints/recommended.yaml
+
+# You might want to exclude generated files from static analysis. For example,
+# if you use a code generator that produces files with a `.g.dart` extension,
+# you can exclude them from analysis by adding this line:
+#
+# analyzer:
+#   exclude:
+#     - '**/*.g.dart'
