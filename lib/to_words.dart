@@ -1,6 +1,5 @@
 library to_words;
 
-import 'src/models/converter_options.dart';
 import 'src/models/to_words_options.dart';
 import 'src/to_words_instance.dart';
 
