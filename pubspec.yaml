@@ -1,7 +1,7 @@
 name: to_words
 description: A Dart library to convert numbers to words. A port of the to-words JavaScript library.
 version: 0.1.0
-repository: https://github.com/Elvril/to-words
+repository: https://github.com/Elvril/to_words
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
