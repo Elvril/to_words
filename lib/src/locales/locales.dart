@@ -1,12 +1,71 @@
+import 'package:to_words/src/locales/bn_in.dart';
+import 'package:to_words/src/locales/ee_ee.dart';
+import 'package:to_words/src/locales/en_bd.dart';
+import 'package:to_words/src/locales/en_gb.dart';
+import 'package:to_words/src/locales/en_gh.dart';
+import 'package:to_words/src/locales/en_ie.dart';
+import 'package:to_words/src/locales/fr_fr.dart';
+import 'package:to_words/src/locales/tr_tr.dart';
+
 import '../interfaces/locale.dart';
 import 'en_ae.dart';
+import 'en_mm.dart';
 import 'en_om.dart';
 import 'en_us.dart';
+import 'en_in.dart';
+import 'en_mu.dart';
+import 'en_ng.dart';
+import 'en_np.dart';
+import 'en_ph.dart';
+import 'es_ar.dart';
+import 'es_es.dart';
+import 'es_mx.dart';
+import 'es_ve.dart';
+import 'fa_ir.dart';
+import 'fr_be.dart';
+import 'gu_in.dart';
+import 'hi_in.dart';
+import 'kn_in.dart';
+import 'ko_kr.dart';
+import 'lv_lv.dart';
+import 'mr_in.dart';
+import 'nl_sr.dart';
+import 'np_np.dart';
+import 'pt_br.dart';
+import 'ur_pk.dart';
 
 final Map<String, Locale> locales = {
-  'en-us': LocaleEnUs(),
-  'en-ae': LocaleEnAe(),
-  'en-om': LocaleEnOm(),
-  // TODO: Add other locales here
-  // 'fr-fr': LocaleFrFr(),
+  'en-US': LocaleEnUs(),
+  'en-AE': LocaleEnAe(),
+  'en-OM': LocaleEnOm(),
+  'fr-FR': LocaleFrFr(),
+  'bn-IN': LocaleBnIn(),
+  'ee-EE': LocaleEeEe(),
+  'en-BD': LocaleEnBd(),
+  'en-GB': LocaleEnGb(),
+  'en-GH': LocaleEnGh(),
+  'en-IE': LocaleEnIe(),
+  'en-IN': LocaleEnIn(),
+  'en-MM': LocaleEnMm(),
+  'en-MU': LocaleEnMu(),
+  'en-NG': LocaleEnNg(),
+  'en-NP': LocaleEnNp(),
+  'en-PH': LocaleEnPh(),
+  'es-AR': LocaleEsAr(),
+  'es-ES': LocaleEsEs(),
+  'es-MX': LocaleEsMx(),
+  'fa-IR': LocaleFaIr(),
+  'fr-BE': LocaleFrBe(),
+  'gu-IN': LocaleGuIn(),
+  'hi-IN': LocaleHiIn(),
+  'kn-IN': LocaleKnIn(),
+  'ko-KR': LocaleKoKr(),
+  'lv-LV': LocaleLvLv(),
+  'mr-IN': LocaleMrIn(),
+  'nl-SR': LocaleNlSr(),
+  'np-NP': LocaleNpNp(),
+  'pt-BR': LocalePtBr(),
+  'tr-TR': LocaleTrTr(),
+  'ur-PK': LocaleUrPk(),
+  'es-VE': LocaleEsVe(),
 };

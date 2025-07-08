@@ -3,7 +3,7 @@ import '../models/currency_options.dart';
 import '../models/locale_config.dart';
 import '../models/number_word_map.dart';
 
-class LocaleTr implements Locale {
+class LocaleTrTr implements Locale {
   @override
   final LocaleConfig config = const LocaleConfig(
     currency: CurrencyOptions(
