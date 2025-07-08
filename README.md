@@ -27,7 +27,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  to_words: ^0.1.0
+  to_words: ^0.2.0
 ```
 
 Then run `dart pub get` or `flutter pub get`.
