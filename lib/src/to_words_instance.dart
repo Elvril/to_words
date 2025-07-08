@@ -53,16 +53,13 @@ class ToWords {
     final parts = number.toString().split('.');
     final intPart = int.parse(parts[0]);
 
-    final ignoreZero =
-        isNumberZero(number) && _locale.config.ignoreZeroInDecimals;
-
-    List<String> words = ignoreZero ? [] : _convertInternal(intPart);
+    List<String> words = _convertInternal(intPart);
 
     final List<String> wordsWithDecimal = [];
     if (isFloat(number)) {
-      if (!ignoreZero) {
-        wordsWithDecimal.add(_locale.config.texts.point);
-      }
+      // For any decimal number, we add the point separator. The integer part
+      // (e.g., "Zero") is now handled correctly above.
+      wordsWithDecimal.add(_locale.config.texts.point);
       final String decimalPart = parts.length > 1 ? parts[1] : '';
       if (decimalPart.startsWith('0') &&
           _locale.config.decimalLengthWordMapping == null) {
@@ -186,12 +183,18 @@ class ToWords {
         (elem) => number >= elem.number,
         orElse: () => const NumberWordMap(number: 0, value: ''));
 
+    // This condition is met if the input `number` is 0 and was not found
+    // in the `exactWordsMapping` at the top of the function.
     if (match.number == 0) {
-      return [];
+      // We provide a hardcoded fallback to prevent an empty output.
+      return ['Zero'];
     }
 
     final List<String> words = [];
-    if (number <= 100 || (number < 1000 && config.namedLessThan1000)) {
+    // By changing to `< 100`, we ensure that 100 is handled by the recursive
+    // logic below, which correctly prepends "One" to "Hundred". This also
+    // makes the logic consistent for all scale numbers (100, 1000, etc.).
+    if (number < 100 || (number < 1000 && config.namedLessThan1000)) {
       words.add(match.value is List<String> ? match.value[0] : match.value);
       number -= match.number;
       if (number > 0) {

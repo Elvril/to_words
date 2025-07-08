@@ -5,7 +5,7 @@ class ToWordsOptions {
   final ConverterOptions converterOptions;
 
   const ToWordsOptions({
-    this.localeCode = 'en-US',
+    this.localeCode = 'en-us',
     this.converterOptions = const ConverterOptions(),
   });
 }
