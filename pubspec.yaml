@@ -1,6 +1,6 @@
 name: to_words
 description: A Dart port of the popular `to-words` JavaScript library for converting numbers (including decimals) into words with multi-locale and currency support.
-version: 0.2.0
+version: 0.2.1
 repository: https://github.com/Elvril/to_words
 
 environment:
